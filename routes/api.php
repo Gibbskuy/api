@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\KategoriController;
+use App\Http\Controllers\Api\BeritaController;
 use App\Http\Controllers\Api\TagController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
@@ -19,3 +20,4 @@ Route::get('/user', function (Request $request) {
 Route::resource('kategori', KategoriController::class)->except(['edit', 'create']);
 Route::resource('tag', TagController::class)->except(['edit', 'create']);
 Route::resource('user', UserController::class)->except(['edit', 'create']);
+Route::resource('berita', BeritaController::class)->except(['edit', 'create']);
